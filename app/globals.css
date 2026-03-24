@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #e2e8f0;
+  --accent: #38bdf8;
+  --accent-2: #8b5cf6;
+}
+
+html,
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617 45%);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: white;
+}

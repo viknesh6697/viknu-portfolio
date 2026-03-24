@@ -1,37 +1,34 @@
-# Viknu Portfolio (v1)
+# Viknu Portfolio (v2)
 
-Initial portfolio codebase inspired by modern premium developer portfolios.
+Production-ready Next.js portfolio tailored for enterprise AI/Data engineering positioning.
+
+## Highlights
+
+- Sticky enterprise navbar with Labs / Agent Playground menu
+- Command palette (`⌘K` / `Ctrl+K`) for fast navigation
+- Hero + authority profile block with concrete credibility metrics
+- Showcase project cards in **Problem → Solution → Impact** format
+- Architecture preview block emphasizing event-driven system design
+- Skillset matrix (AI/LLM, Data, Cloud) + capability tags
+- Experience timeline, case-study section, blog ideas, and strong conversion CTA
+- Dark futuristic theme with electric blue/purple accents
 
 ## Stack
 
 - Next.js App Router + TypeScript
 - Tailwind CSS v4
 - Framer Motion
-- cmdk command menu
-- Zod validation
+- cmdk
+- Headless UI
 
-## Setup
+## Commands
 
 ```bash
 npm install
 npm run dev
+npm run lint
+npm run typecheck
+npm run build
 ```
 
 Open `http://localhost:3000`.
-
-## Included pages
-
-- `/`
-- `/about`
-- `/work`
-- `/blogs`
-- `/labs`
-- `/links`
-- `/uses`
-- `/guestbook`
-- `/book`
-
-## Notes
-
-- Guestbook uses in-memory storage in `app/api/guestbook/route.ts` (replace with a database in v2).
-- Replace placeholder values in `data/site.ts` and `metadataBase` in `app/layout.tsx`.
