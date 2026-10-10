@@ -1,37 +1,23 @@
-# Viknu Portfolio (v1)
+# Viknu Portfolio
 
-Initial portfolio codebase inspired by modern premium developer portfolios.
+Horizontal creative portfolio scaffold — Vite + React + TypeScript + GSAP.
+
+Inspired by the sideways-scroll craft of [patrickheng.com](https://patrickheng.com/).
 
 ## Stack
 
-- Next.js App Router + TypeScript
-- Tailwind CSS v4
-- Framer Motion
-- cmdk command menu
-- Zod validation
+- **Vite** — build tooling
+- **React + TypeScript** — UI
+- **GSAP** — intro motion + progress bar
+- Custom horizontal scroll (wheel → smoothed `translate3d`)
 
-## Setup
+## Scripts
 
 ```bash
 npm install
 npm run dev
+npm run build
 ```
 
-Open `http://localhost:3000`.
-
-## Included pages
-
-- `/`
-- `/about`
-- `/work`
-- `/blogs`
-- `/labs`
-- `/links`
-- `/uses`
-- `/guestbook`
-- `/book`
-
-## Notes
-
-- Guestbook uses in-memory storage in `app/api/guestbook/route.ts` (replace with a database in v2).
-- Replace placeholder values in `data/site.ts` and `metadataBase` in `app/layout.tsx`.
+Desktop: scroll vertically to move sideways.  
+Mobile (&lt;900px): stacked vertical layout.
