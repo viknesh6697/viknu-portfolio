@@ -25,13 +25,14 @@ export type ExperienceRole = {
 export const site = {
   name: 'Vikneshvar',
   fullName: 'Vikneshvar Balasubramanian',
-  role: 'Generative AI Engineer',
-  roleLead: 'Generative AI',
+  role: 'Forward Deployed Engineer',
+  roleLead: 'Forward Deployed',
   roleAccent: 'Engineer.',
   tagline:
-    'Production RAG, agentic pipelines, and data platforms. Six-plus years, based in Chennai.',
+    'I take AI from pilot to governed production: RAG, agents, and data platforms on AWS. Six-plus years, based in Chennai.',
   email: 'bsvikneshvar@gmail.com',
   location: 'Chennai, India',
+  credly: 'https://www.credly.com/users/vikneshvar-balasubramanian',
   introPhoto: '/photos/profile.jpg',
   introPhotoRatio: '1220 / 1367',
   contactPhoto: '/photos/cliff.jpg',
@@ -42,6 +43,8 @@ export const site = {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/vikneshvar-balasubramanian-6b2926161',
     },
+    { label: 'Credly', href: 'https://www.credly.com/users/vikneshvar-balasubramanian' },
+    { label: 'Resume', href: '/resume.pdf' },
   ],
 }
 
@@ -49,7 +52,26 @@ export const about = {
   title: 'I build production AI systems that retrieve, reason, and act.',
   text: 'Senior Associate, Gen AI Engineer at PwC. I design RAG and agent systems on AWS Bedrock that ingest enterprise documents, retrieve with hybrid search, and answer in plain language.',
   skills: ['RAG and agents', 'AWS Bedrock', 'Hybrid retrieval', 'Data platforms'],
-  certification: 'AWS Certified Generative AI Developer – Professional',
+  certifications: [
+    {
+      label: 'AWS Partner: Forward Deployed Engineer – Advanced',
+      image: '/badges/aws-fde-advanced.png',
+    },
+    {
+      label: 'AWS Certified Generative AI Developer – Professional',
+      image: '/badges/aws-genai-developer-pro.png',
+    },
+    {
+      label: 'AWS Partner: Agentic AI Technical – Trained',
+      image: '/badges/aws-agentic-ai-technical.png',
+    },
+  ],
+  otherCertifications:
+    'AWS - Azure - GCP',
+  atlas: {
+    label: 'Enterprise AI Atlas',
+    href: '/enterprise-ai-atlas.pdf',
+  },
   photo: '/photos/desk.jpg',
   photoRatio: '1181 / 885',
 }

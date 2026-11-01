@@ -8,7 +8,19 @@ export function About() {
         <p className="eyebrow">About</p>
         <h2 className="about__title">{about.title}</h2>
         <p className="about__text">{about.text}</p>
-        <p className="about__cert">{about.certification}</p>
+        <ul className="about__badges">
+          {about.certifications.map((cert) => (
+            <li key={cert.image}>
+              <a href={site.credly} target="_blank" rel="noreferrer">
+                <img src={cert.image} alt={cert.label} />
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p className="about__cert">{about.otherCertifications}</p>
+        <a className="about__atlas" href={about.atlas.href} target="_blank" rel="noreferrer">
+          {about.atlas.label} →
+        </a>
       </div>
       <div className="about__side">
         <ul className="about__list">
@@ -37,14 +49,23 @@ export function Contact() {
   return (
     <section className="panel contact" data-panel="contact">
       <div className="cell contact__copy">
-        <p className="eyebrow">Want to</p>
+        <p className="eyebrow">Have an AI system to ship?</p>
         <h2 className="contact__title">
-          Let’s make something
-          <em> sharp.</em>
+          Let’s build it,
+          <em> together.</em>
         </h2>
         <a className="contact__email" href={`mailto:${site.email}`}>
           {site.email}
         </a>
+        <ul className="contact__socials">
+          {site.socials.map((item) => (
+            <li key={item.label}>
+              <a href={item.href} target="_blank" rel="noreferrer">
+                {item.label} →
+              </a>
+            </li>
+          ))}
+        </ul>
         <p className="contact__location">{site.location}</p>
       </div>
       <div className="photo-well contact__photo">
@@ -55,15 +76,6 @@ export function Contact() {
           ratio={site.contactPhotoRatio}
         />
       </div>
-      <ul className="contact__socials">
-        {site.socials.map((item) => (
-          <li key={item.label}>
-            <a href={item.href} target="_blank" rel="noreferrer">
-              {item.label} →
-            </a>
-          </li>
-        ))}
-      </ul>
     </section>
   )
 }
