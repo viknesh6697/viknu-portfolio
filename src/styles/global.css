@@ -288,10 +288,10 @@ button.slot--fit {
 
 .hero__title {
   margin: 1rem 0 0;
-  max-width: 16ch;
+  max-width: 18ch;
   font-weight: 700;
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  line-height: 0.9;
+  font-size: clamp(1.45rem, 2.7vw, 2.4rem);
+  line-height: 0.92;
   letter-spacing: -0.05em;
 }
 
@@ -586,12 +586,52 @@ button.slot--fit {
   line-height: 1.6;
 }
 
-.about__cert {
+.about__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
   margin: 1.25rem 0 0;
+}
+
+.about__badges a {
+  display: block;
+  line-height: 0;
+}
+
+.about__badges img {
+  display: block;
+  height: 68px;
+  width: auto;
+}
+
+.about__cert {
+  margin: 0.9rem 0 0;
+  max-width: 42ch;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.about__atlas {
+  align-self: flex-start;
+  margin-top: 1.15rem;
+  padding: 0.7rem 0.95rem;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.about__atlas:hover {
+  background: var(--ink);
+  color: var(--bg);
 }
 
 .about__side {
@@ -726,10 +766,7 @@ button.slot--fit {
 
 .contact {
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr) auto;
-  grid-template-areas:
-    'copy photo'
-    'socials socials';
+  grid-template-areas: 'copy photo';
 }
 
 .contact__copy {
@@ -759,7 +796,7 @@ button.slot--fit {
 
 .contact__email {
   align-self: flex-start;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   padding: 0.15rem 0.2rem;
   border-bottom: 1px solid var(--ink);
   font-size: clamp(1.2rem, 2.4vw, 1.8rem);
@@ -775,7 +812,7 @@ button.slot--fit {
 }
 
 .contact__location {
-  margin: 1.25rem 0 0;
+  margin: 1.1rem 0 0;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -783,31 +820,27 @@ button.slot--fit {
 }
 
 .contact__socials {
-  grid-area: socials;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
-  border-top: 1px solid var(--line);
-}
-
-.contact__socials li + li {
-  border-left: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.15rem;
+  margin-top: 1.15rem;
 }
 
 .contact__socials a {
-  display: flex;
-  justify-content: center;
-  padding: 1.15rem var(--pad);
+  display: inline-flex;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid var(--line);
   text-decoration: none;
   font-size: 0.85rem;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 
 .contact__socials a:hover {
-  background: var(--ink);
-  color: var(--bg);
+  border-bottom-color: var(--ink);
+  color: var(--paper);
 }
 
 /* ——— Stacked layout ——— */
@@ -895,7 +928,7 @@ button.slot--fit {
   }
 
   .hero__meta {
-    border-top: 0;
+    display: none;
   }
 
   .hero__place {
@@ -932,10 +965,6 @@ button.slot--fit {
 
   .experience__item {
     padding-block: 1.1rem;
-  }
-
-  .contact__socials {
-    border-top: 0;
   }
 }
 
